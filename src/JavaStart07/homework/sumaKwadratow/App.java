@@ -22,7 +22,9 @@ public class App {
         System.out.println("Suma kwadratow liczb w tablicy to:" + sumSquareNumber);
 
         for (int p: table) {
-            sumSquareNumberDifferentMethod += table[p-1] * table[p-1];
+            int i = 0;
+            sumSquareNumberDifferentMethod += table[i] * table[i];
+            i++;
             System.out.println("Liczba wprowadzona to " + table[p-1]);
         }
 
