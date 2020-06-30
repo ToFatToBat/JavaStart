@@ -12,9 +12,8 @@ public class Lecturer extends People {
 
     @Override
     public String toString() {
-        return "Lecturer{" +
-                "salary=" + salary +
-                "} " + super.toString();
+        return super.toString()  +
+                "Salary=" + salary + "\n" ;
     }
 
 }

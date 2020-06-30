@@ -17,12 +17,10 @@ public class People {
 
     @Override
     public String toString() {
-        return "People{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", city='" + city + '\'' +
-                ", road='" + road + '\'' +
-                ", houseNumber=" + houseNumber +
-                '}';
+        return "Name= " + name + '\n' +
+                "Surname='" + surname + '\n' +
+                "City='" + city + '\n' +
+                "Road='" + road + '\n' +
+                "HouseNumber=" + houseNumber + '\n';
     }
 }

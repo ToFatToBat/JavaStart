@@ -3,25 +3,22 @@ package JavaStart08.homework.comapny;
 import java.util.Arrays;
 
 public class Group {
-    String name;
-    int number;
-    Lecturer lecturer;
-    Student [] students;
+    private String name;
+    private int number;
+    private Lecturer lecturer;
 
-    public Group(String name, int number, Lecturer lecturer, Student [] students) {
+    public Group(String name, int number, Lecturer lecturer) {
         this.name = name;
         this.number = number;
         this.lecturer = lecturer;
-        this.students = students;
+
     }
+
 
     @Override
     public String toString() {
-        return "Group{" +
-                "name='" + name + '\'' +
-                ", number=" + number +
-                ", lecturer=" + lecturer +
-                ", students=" + Arrays.toString(students) +
-                '}';
+        return "Group name= " + name + "\n" +
+                "number=" + number + "\n" +
+                "lecturer=" + lecturer + '\n';
     }
 }
