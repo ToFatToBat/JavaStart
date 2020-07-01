@@ -1,13 +1,13 @@
 package JavaStart08.homework.comapny;
 
-public class People {
+public class Person {
     private String name;
     private String surname;
     private String city;
     private String road;
     private int houseNumber;
 
-    protected People(String name, String surname, String city, String road, int houseNumber) {
+    protected Person(String name, String surname, String city, String road, int houseNumber) {
         this.name = name;
         this.surname = surname;
         this.city = city;

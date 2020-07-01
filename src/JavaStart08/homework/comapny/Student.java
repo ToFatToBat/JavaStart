@@ -2,10 +2,10 @@ package JavaStart08.homework.comapny;
 
 import java.util.Arrays;
 
-public class Student extends People {
+public class Student extends Person {
 
     private int groupCount = 0;
-    Group[] groups = new Group[10];
+    private Group[] groups = new Group[10];
 
 
     public Student(String name, String surname, String city, String road, int houseNumber) {

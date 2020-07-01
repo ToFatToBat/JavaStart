@@ -25,9 +25,9 @@ public class App {
         students[2].addStudentToGroup(group2);
 
 
-        Grades [] grades = new Grades[5];
-        Grades grades1 = new Grades(students[0], group1, 5);
-        Grades grades2 = new Grades(students[1], group1, 4);
+        Grade[] grades = new Grade[5];
+        Grade grades1 = new Grade(students[0], group1, 5);
+        Grade grades2 = new Grade(students[1], group1, 4);
         grades[0] = grades1;
         grades[1] = grades2;
 

@@ -1,6 +1,6 @@
 package JavaStart08.homework.comapny;
 
-public class Lecturer extends People {
+public class Lecturer extends Person {
     int salary;
 
 
