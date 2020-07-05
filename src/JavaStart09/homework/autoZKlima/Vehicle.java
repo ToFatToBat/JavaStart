@@ -5,7 +5,7 @@ public class Vehicle {
     protected int tankCapasity;
     protected double standardFuelConsumption;
 
-    public Vehicle () {
+    public Vehicle() {
 
     }
 
@@ -15,13 +15,18 @@ public class Vehicle {
         this.standardFuelConsumption = standardFuelConsumption;
     }
 
-    public double avrFuelConsumption () {
-     return standardFuelConsumption;
+    public  double carRange(Vehicle vehicle) {
+        return vehicle.tankCapasity / avrFuelConsumption(vehicle);
+    }
+
+
+    public double avrFuelConsumption(Vehicle vehicle) {
+        return tankCapasity / standardFuelConsumption;
     }
 
     @Override
     public String toString() {
-        return  name + '\n' +
+        return name + '\n' +
                 "tankCapasity= " + tankCapasity + '\n' +
                 "avrFuelConsumption= " + standardFuelConsumption + '\n';
     }

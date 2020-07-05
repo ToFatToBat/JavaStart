@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
-        Logic logic = new Logic();
+
         Vehicle[] vehicles = new Vehicle[2];
         Vehicle car = new Car("Ferrari", 90, 24, false);
         Vehicle truck = new Truck("Man", 1200, 36, false, 27000);
@@ -15,8 +15,8 @@ public class App {
 
         System.out.println(Arrays.toString(vehicles));
         System.out.println();
-        System.out.println(logic.carRange(car));
-        System.out.println(logic.carRange(truck));
+        System.out.println(((Car)car).carRange(car));
+        System.out.println(((Truck)truck).carRange(truck));
 
 
         System.out.println();
@@ -27,8 +27,8 @@ public class App {
 
         System.out.println(Arrays.toString(vehicles));
         System.out.println();
-        System.out.println(logic.carRange(car));
-        System.out.println(logic.carRange(truck));
+        System.out.println(((Car)car).carRange(car));
+        System.out.println(((Truck)truck).carRange(truck));
 
     }
 }
