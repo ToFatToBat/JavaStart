@@ -15,11 +15,11 @@ public class Truck extends Car {
     }
 
     @Override
-    public double avrFuelConsumption(Vehicle vehicle) {
+    public double avrFuelConsumption() {
         double tmpFuelAvrConsumption;
         if (super.isAirConditionIsOn() == true) {
-            tmpFuelAvrConsumption = super.standardFuelConsumption + 1.6 + getLoadWeight() / 100 * 0.5;
-        } else tmpFuelAvrConsumption = super.standardFuelConsumption + getLoadWeight() / 100 * 0.5;
+            tmpFuelAvrConsumption = super.getStandardFuelConsumption() + 1.6 + getLoadWeight() / 100 * 0.5;
+        } else tmpFuelAvrConsumption = super.getStandardFuelConsumption() + getLoadWeight() / 100 * 0.5;
         return tmpFuelAvrConsumption;
     }
 

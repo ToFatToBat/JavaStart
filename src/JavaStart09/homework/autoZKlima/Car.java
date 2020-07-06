@@ -19,11 +19,11 @@ public class Car extends Vehicle {
     }
 
     @Override
-    public double avrFuelConsumption(Vehicle vehicle) {
+    public double avrFuelConsumption() {
     double tmpFuelAvrConsumption;
         if (isAirConditionIsOn() == true) {
-        tmpFuelAvrConsumption = standardFuelConsumption + 0.8;
-    } else tmpFuelAvrConsumption = standardFuelConsumption;
+        tmpFuelAvrConsumption = getStandardFuelConsumption() + 0.8;
+    } else tmpFuelAvrConsumption = getStandardFuelConsumption();
         return tmpFuelAvrConsumption;
 }
 

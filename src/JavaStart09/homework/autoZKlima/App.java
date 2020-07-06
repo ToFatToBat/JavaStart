@@ -15,8 +15,8 @@ public class App {
 
         System.out.println(Arrays.toString(vehicles));
         System.out.println();
-        System.out.println(((Car)car).carRange(car));
-        System.out.println(((Truck)truck).carRange(truck));
+        System.out.println(car.carRange());
+        System.out.println(truck.carRange());
 
 
         System.out.println();
@@ -27,8 +27,8 @@ public class App {
 
         System.out.println(Arrays.toString(vehicles));
         System.out.println();
-        System.out.println(((Car)car).carRange(car));
-        System.out.println(((Truck)truck).carRange(truck));
+        System.out.println(car.carRange());
+        System.out.println(truck.carRange());
 
     }
 }

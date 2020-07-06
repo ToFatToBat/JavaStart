@@ -1,13 +1,11 @@
 package JavaStart09.homework.autoZKlima;
 
 public class Vehicle {
-    protected String name;
-    protected int tankCapasity;
-    protected double standardFuelConsumption;
+    private String name;
+    private int tankCapasity;
+    private double standardFuelConsumption;
 
-    public Vehicle() {
 
-    }
 
     public Vehicle(String name, int tankCapasity, double standardFuelConsumption) {
         this.name = name;
@@ -15,13 +13,25 @@ public class Vehicle {
         this.standardFuelConsumption = standardFuelConsumption;
     }
 
-    public  double carRange(Vehicle vehicle) {
-        return vehicle.tankCapasity / avrFuelConsumption(vehicle);
+    public  double carRange() {
+        return getTankCapasity() / avrFuelConsumption();
     }
 
 
-    public double avrFuelConsumption(Vehicle vehicle) {
-        return tankCapasity / standardFuelConsumption;
+    public double avrFuelConsumption() {
+        return getTankCapasity() / getStandardFuelConsumption();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getTankCapasity() {
+        return tankCapasity;
+    }
+
+    public double getStandardFuelConsumption() {
+        return standardFuelConsumption;
     }
 
     @Override
