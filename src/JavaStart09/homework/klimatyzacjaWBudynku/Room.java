@@ -7,11 +7,12 @@ public class Room extends Building {
     private double borderTemp;
 
 
-    public Room(double temperature, int capacity, AirConditionerModel airConditionerModel, int no, double borderTemp) {
-        super(temperature, capacity, airConditionerModel);
+    public Room(double temperature, int capacity, AirConditionClass airConditionClass, int no, double borderTemp) {
+        super(temperature, capacity, airConditionClass);
         this.no = no;
         this.borderTemp = borderTemp;
     }
+
 
     public double tempDecrease () {
         if (super.getTemperature() < borderTemp) {
