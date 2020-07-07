@@ -23,5 +23,10 @@ public class Person {
         this.id = id;
     }
 
-
+    @Override
+    public String toString() {
+        return "firsName= " + firsName + '\n' +
+                "lastName= " + lastName + '\n' +
+                "id= " + id + '\n';
+    }
 }

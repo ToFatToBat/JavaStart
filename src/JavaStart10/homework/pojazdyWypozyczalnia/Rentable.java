@@ -3,7 +3,7 @@ package JavaStart10.homework.pojazdyWypozyczalnia;
 public interface Rentable {
 
 
-    String Rent();
+    String rent(Person person);
 
     String handOver();
 
