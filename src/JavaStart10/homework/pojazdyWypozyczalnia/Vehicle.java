@@ -1,8 +1,12 @@
 package JavaStart10.homework.pojazdyWypozyczalnia;
 
+import static javax.swing.JSplitPane.LEFT;
+import static javax.swing.JSplitPane.RIGHT;
+
 public abstract class Vehicle implements Moveable {
     private String name;
     private int year;
+    private Direction direction;
 
     public Vehicle(String name, int year) {
         this.name = name;
@@ -18,28 +22,30 @@ public abstract class Vehicle implements Moveable {
     }
 
     @Override
-    public String turnLeft() {
-        return String.valueOf(Direction.LEFT);
+    public void turnLeft() {
+        direction = Direction.LEFT;
     }
 
     @Override
-    public String turnRight() {
-        return String.valueOf(Direction.RIGHT);
+    public void turnRight() {
+        direction = Direction.RIGHT;
     }
 
     @Override
-    public String goForward() {
-        return String.valueOf(Direction.FORWARD);
+    public void goForward() {
+        direction = Direction.FORWARD;
     }
 
     @Override
-    public String goBack() {
-        return String.valueOf(Direction.BACK);
+    public void goBack() {
+        direction = Direction.BACK;
+
     }
 
     @Override
     public String toString() {
         return "name= " + getName() + '\n' +
-                "year= " + getYear() + '\n';
+                "year= " + getYear() + '\n' +
+                "direction " + direction + '\n';
     }
 }
