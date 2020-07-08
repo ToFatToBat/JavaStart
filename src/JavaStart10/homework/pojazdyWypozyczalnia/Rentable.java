@@ -3,9 +3,9 @@ package JavaStart10.homework.pojazdyWypozyczalnia;
 public interface Rentable {
 
 
-    String rent(Person person);
+    void   rent(Person person);
 
-    String handOver();
+    void handOver();
 
     boolean isRent();
 }

@@ -9,21 +9,19 @@ public class RentableCar extends Car implements Moveable, Rentable {
     }
 
     @Override
-    public String rent(Person person) {
+    public void rent(Person person) {
         System.out.println("Auto zostało wypozyczone przez " + person.toString());
-        setCarRentedBySomeone(true);
-        return null;
+        isCarRentedBySomeone = true;
     }
 
     @Override
-    public String handOver() {
-     setCarRentedBySomeone(false);
-     return null;
+    public void handOver() {
+     isCarRentedBySomeone = false;
     }
 
     @Override
     public boolean isRent() {
-        return isCarRentedBySomeone();
+        return isCarRentedBySomeone;
 
     }
 
