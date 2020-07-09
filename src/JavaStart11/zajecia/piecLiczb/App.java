@@ -23,7 +23,9 @@ public class App {
                 counter++;
             } catch (InputMismatchException e) {
                 System.out.println("Nie podano liczby, spróbuj jeszcze raz: ");
-                sum += sc.nextInt();
+                int next = sc.nextInt();
+                sum += next;
+                counter++;
             }
 
         } while (counter < 5);
