@@ -6,16 +6,16 @@ public class App {
         Ram ram = new Ram("DDR4","Kingstone", "987459345HGFD", 16, 3400, 70, 116 );
         HardDrive hardDrive = new HardDrive("234234gt", "Samsung", "76532635fd", 2000);
 
-        ComputerToUse computerToUse = new ComputerToUse(processor, ram, hardDrive);
+        Computer computer = new Computer(processor, ram, hardDrive);
 
-        System.out.println(computerToUse.toString());
+        System.out.println(computer.toString());
         System.out.println("---------------------");
-        computerToUse.processor.overclocking(200);
-        computerToUse.ram.overclocking(400);
-        System.out.println(computerToUse.toString());
+        computer.getProcessor().overclocking(200);
+        computer.getRam().overclocking(400);
+        System.out.println(computer.toString());
         System.out.println("---------------------");
-        computerToUse.processor.overclocking(100);
-        System.out.println(computerToUse.toString());
+        computer.getProcessor().overclocking(100);
+        System.out.println(computer.toString());
         System.out.println("---------------------");
 
     }

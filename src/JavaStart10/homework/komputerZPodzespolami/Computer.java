@@ -1,20 +1,34 @@
 package JavaStart10.homework.komputerZPodzespolami;
 
-public abstract class Computer {
-   private String model;
-    private String producer;
-    private String serialNo;
+public class Computer {
 
-    public Computer(String model, String producer, String serialNo) {
-        this.model = model;
-        this.producer = producer;
-        this.serialNo = serialNo;
+    private Processor processor;
+    private Ram ram;
+    private HardDrive hardDrive;
+
+    public Computer(Processor processor, Ram ram, HardDrive hardDrive) {
+        this.processor = processor;
+        this.ram = ram;
+        this.hardDrive = hardDrive;
+    }
+
+    public Processor getProcessor() {
+        return processor;
+    }
+
+    public Ram getRam() {
+        return ram;
+    }
+
+    public HardDrive getHardDrive() {
+        return hardDrive;
     }
 
     @Override
     public String toString() {
-        return  "model= " + model + '\n' +
-                "producer= " + producer + '\n' +
-                "serialNo= " + serialNo + '\n';
+        return "ComputerToUse{" +
+                processor +
+                ram +
+                hardDrive;
     }
 }

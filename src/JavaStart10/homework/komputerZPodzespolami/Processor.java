@@ -1,6 +1,6 @@
 package JavaStart10.homework.komputerZPodzespolami;
 
-public class Processor extends Computer implements Overclocking {
+public class Processor extends Hardware implements Overclocking {
     private int mhz;
     private int temp;
     private int maxTemp;

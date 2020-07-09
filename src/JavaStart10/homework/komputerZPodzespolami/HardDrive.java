@@ -1,6 +1,6 @@
 package JavaStart10.homework.komputerZPodzespolami;
 
-public class HardDrive extends Computer {
+public class HardDrive extends Hardware {
     private int size;
 
     public HardDrive(String model, String producer, String serialNo, int size) {

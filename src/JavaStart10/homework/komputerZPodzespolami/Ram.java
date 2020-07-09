@@ -1,6 +1,6 @@
 package JavaStart10.homework.komputerZPodzespolami;
 
-public class Ram extends Computer implements Overclocking {
+public class Ram extends Hardware implements Overclocking {
     private int memoryAmount;
     private int mhz;
     private int temp;
