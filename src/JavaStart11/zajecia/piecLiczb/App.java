@@ -20,8 +20,10 @@ public class App {
                 System.out.println("Podaj kolejna liczbe: ");
                 int next = sc.nextInt();
                 sum += next;
+                counter++;
             } catch (InputMismatchException e) {
-                sc.nextInt();
+                System.out.println("Nie podano liczby, spróbuj jeszcze raz: ");
+                sum += sc.nextInt();
             }
 
         } while (counter < 5);
