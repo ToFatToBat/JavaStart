@@ -7,6 +7,7 @@ public class CashMachine {
     public static void main(String[] args) throws NoSuchOptionException {
 
         int choosenIntOption;
+        InOut inOut = new InOut();
         Scanner sc = new Scanner(System.in);
 
         Person person = new Person("Walter", "Rohl", 56);
@@ -18,9 +19,9 @@ public class CashMachine {
         do {
 
             System.out.println("Wybierz opcje:");
-            printOptions();
+            inOut.printOptions();
            // choosenIntOption = sc.nextInt();
-           option = getOption();
+           option = inOut.getOption();
             switch (option) {
                 case STAN_KONTA:
                     System.out.println(bankAccount.getAccountBalance());
@@ -48,27 +49,6 @@ public class CashMachine {
 
     }
 
-    Scanner sc = new Scanner(System.in);
-
-    public static void printOptions() {
-        for (Option o : Option.values()) {
-            System.out.println(o.toString());
-        }
-
-    }
-
-    public static Option getOption() {
-        Option option = null;
-        DataReader dataReader = new DataReader();
-        try {
-            option = Option.createFromValue(dataReader.readDataFromUser());
-        } catch (NoSuchOptionException e) {
-            e.printStackTrace();
-        } catch (InputMismatchException e) {
-            System.out.println("Wprowadzono wartosc, ktora nie jest liczba.");
-        }
-        return option;
-    }
 
 
 }
