@@ -1,7 +1,5 @@
 package JavaStart11.homework.SafeBankAccount;
 
-import javax.naming.NamingEnumeration;
-import java.net.PortUnreachableException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -15,15 +13,15 @@ public class CashMachine {
         BankAccount bankAccount = new BankAccount(person, 389000.34);
 
 
-        Options options;
+        Option option;
 
         do {
 
             System.out.println("Wybierz opcje:");
             printOptions();
            // choosenIntOption = sc.nextInt();
-           options = getOption();
-            switch (options) {
+           option = getOption();
+            switch (option) {
                 case STAN_KONTA:
                     System.out.println(bankAccount.getAccountBalance());
                     break;
@@ -39,7 +37,7 @@ public class CashMachine {
             }
 
 
-        } while (options != Options.EXIT);
+        } while (option != Option.EXIT);
 
 
 //        System.out.println(bankAccount.getAccountBalance());
@@ -53,23 +51,23 @@ public class CashMachine {
     Scanner sc = new Scanner(System.in);
 
     public static void printOptions() {
-        for (Options o : Options.values()) {
+        for (Option o : Option.values()) {
             System.out.println(o.toString());
         }
 
     }
 
-    public static Options getOption() {
-        Options options = Options.EXIT ;
+    public static Option getOption() {
+        Option option = null;
         DataReader dataReader = new DataReader();
         try {
-            options = Options.createFromInt(dataReader.read());
+            option = Option.createFromValue(dataReader.readDataFromUser());
         } catch (NoSuchOptionException e) {
             e.printStackTrace();
         } catch (InputMismatchException e) {
             System.out.println("Wprowadzono wartosc, ktora nie jest liczba.");
         }
-        return options;
+        return option;
     }
 
 
