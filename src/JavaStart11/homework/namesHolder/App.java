@@ -21,6 +21,5 @@ public class App {
         logic.add("Marek");
         logic.add(null);
 
-
     }
 }
