@@ -3,14 +3,14 @@ package JavaStart11.homework.namesHolder;
 public class Logic {
     private int counter = 0;
     private static int tableSize = 4;
-    NamesHolder[] namesHolders = new NamesHolder[tableSize];
+    String [] namesHolders = new String[tableSize];
 
 
-    public void add(NamesHolder namesHolder) {
+    public void add(String namesHolder) {
         if (namesHolder == null) {
             throw new NullPointerException("Obiekt jest pusty. Nie posiada wartosci.");
         }
-        if (findDuplicate(namesHolder.getName()) == true) {
+        if (findDuplicate(namesHolder) == true) {
             throw new IllegalArgumentException("Podana wartosc juz wystepuje.");
         }
         if (counter > tableSize) {
@@ -26,8 +26,8 @@ public class Logic {
             throw new IllegalArgumentException("wprowadzona wartosc jest rowna null.");
         } else {
             boolean result = false;  //Jak mozna obejsc unikniecie bledu w ostatniom result. Jak tu nie przypisze wartosci to wywala w ostatnim result blad.
-            for (NamesHolder i : namesHolders) {
-                if (i.getName().equals(name)) {
+            for (String i : namesHolders) {
+                if (i.equals(name)) {
                     result = true;
                     continue;
                 } else result = false;
@@ -41,7 +41,7 @@ public class Logic {
 //        int i = 0;
         int filledFields = 0;
         for (int i =0; i < counter; i++) {
-            if (namesHolders[i].getName() != null) {
+            if (namesHolders[i] != null) {
                 filledFields++;
             }
 
@@ -57,7 +57,7 @@ public class Logic {
             return duplicate;
         } else {
             for (int i = 0; i < counter; i++) {
-                if ((namesHolders[i].getName()).equals(name) == true) {
+                if ((namesHolders[i]).equals(name) == true) {
                     System.out.println("Wprowadzane imie juz istnieje.");
                     duplicate = true;
                     break;
@@ -66,5 +66,13 @@ public class Logic {
             }
             return duplicate;
         }
+    }
+
+    public String[] getNamesHolders() {
+        return namesHolders;
+    }
+
+    public void setNamesHolders(String[] namesHolders) {
+        this.namesHolders = namesHolders;
     }
 }
