@@ -5,7 +5,6 @@ public class App {
         Logic logic = new Logic();
 
 
-
         logic.add("Karol");
         logic.add("Adam");
 
@@ -13,8 +12,7 @@ public class App {
         System.out.println(logic.size());
 
 
-
- //       logic.add("Karol");
+        logic.add("Karol");
 
         System.out.println(logic.size());
 
