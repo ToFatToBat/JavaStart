@@ -3,6 +3,8 @@ package JavaStart12.zajecia.bazaProduktowWPliku;
 import java.io.Serializable;
 
 public class Product implements Serializable {
+    private static final long serialVersionUID = 35467645443234567L;
+
     String name;
     String producer;
     double price;
