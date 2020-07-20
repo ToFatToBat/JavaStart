@@ -28,5 +28,14 @@ public class App {
         }
         System.out.println(lista.toString());
 
+        System.out.println("---------------");
+
+        for (int i = (lista.size()-1); i >= 0; i--) {
+            System.out.println(lista.get(i));
+
+        }
+
+
+
     }
 }
