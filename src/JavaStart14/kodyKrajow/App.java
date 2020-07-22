@@ -16,8 +16,25 @@ public class App {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        Map<String, Country> countryMap = new HashMap<>();
 
+        Map<String, Country> countryMap1 =  dataUploadAndLoad(sc);
+
+
+
+
+
+        System.out.println("Podaj jeden z indeksow w celu wyswietlenia pelnej informacji:");
+        System.out.println(countryMap1.keySet());
+        Scanner scanner = new Scanner(System.in);
+        String choosenKeySet = scanner.nextLine();
+        System.out.println(countryMap1.get(choosenKeySet));
+
+    }
+
+    public static Map<String, Country> dataUploadAndLoad (Scanner sc) {
+
+
+        Map<String, Country> countryMap = new HashMap<>();
 
         while (sc.hasNextLine()) {
             String oneLine = sc.nextLine();
@@ -25,14 +42,15 @@ public class App {
             Country country = new Country(oneLineTable[0], oneLineTable[1], Integer.valueOf(oneLineTable[2]));
             countryMap.put(oneLineTable[0], country);
         }
-        sc.close();
 
+        return countryMap;
+    }
 
-        System.out.println("Podaj jeden z indeksow w celu wyswietlenia pelnej informacji:");
-        System.out.println(countryMap.keySet());
-        Scanner scanner = new Scanner(System.in);
-        String choosenKeySet = scanner.nextLine();
-        System.out.println(countryMap.get(choosenKeySet));
+    public static void userChoise () {
+
+    }
+
+    public static void printData () {
 
     }
 }
