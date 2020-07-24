@@ -8,6 +8,28 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+
+
+
+        Map<String, Country> countryMap1 =  dataUploadAndLoad();
+        String choosenKeySet = userChoise(countryMap1);
+        printChoise(countryMap1, choosenKeySet);
+
+    }
+
+    private static void printChoise(Map<String, Country> countryMap1, String choosenKeySet) {
+        System.out.println(countryMap1.get(choosenKeySet));
+    }
+
+    private static String userChoise(Map<String, Country> countryMap1) {
+        System.out.println("Podaj jeden z indeksow w celu wyswietlenia pelnej informacji:");
+        System.out.println(countryMap1.keySet());
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
+
+    private static Map<String, Country> dataUploadAndLoad () {
+
         String filename = "C:\\Users\\kpapi\\JavaStart\\JavaStart\\src\\JavaStart14\\kodyKrajow\\countries.csv";
         File file = new File(filename);
         Scanner sc = null;
@@ -16,24 +38,6 @@ public class App {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-        Map<String, Country> countryMap1 =  dataUploadAndLoad(sc);
-
-
-
-
-
-        System.out.println("Podaj jeden z indeksow w celu wyswietlenia pelnej informacji:");
-        System.out.println(countryMap1.keySet());
-        Scanner scanner = new Scanner(System.in);
-        String choosenKeySet = scanner.nextLine();
-        System.out.println(countryMap1.get(choosenKeySet));
-
-    }
-
-    public static Map<String, Country> dataUploadAndLoad (Scanner sc) {
-
-
         Map<String, Country> countryMap = new HashMap<>();
 
         while (sc.hasNextLine()) {
@@ -46,11 +50,5 @@ public class App {
         return countryMap;
     }
 
-    public static void userChoise () {
 
-    }
-
-    public static void printData () {
-
-    }
 }
