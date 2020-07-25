@@ -1,9 +1,9 @@
 package JavaStart15.zajecia.sortowanieKomputerow;
 
 public class Computer implements Comparable <Computer>{
-    String name;
-    int cpu;
-    int memory;
+    private String name;
+    private int cpu;
+    private int memory;
 
     public String getName() {
         return name;
