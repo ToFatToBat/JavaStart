@@ -5,17 +5,15 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 public class App {
-    public static void main(String[] args)  {
-        int option =0;
+    public static void main(String[] args) throws IOException {
+        int option = 0;
         List<Player> playerList = new ArrayList<>();
         PlayerReader playerReader = new PlayerReader();
         WriteToFile writeToFile = new WriteToFile();
 
 
-
-
-        do {
-            try {
+        try {
+            do {
                 System.out.println("1 - wprowadz zawodnika i wynik" + "\n" + "2 - wyswietl wyniki zawodnikow" + "\n" + "3 - EXIT");
                 Scanner sc = new Scanner(System.in);
                 option = sc.nextInt();
@@ -23,11 +21,10 @@ public class App {
 
                 switch (option) {
                     case 1:
-                        Player player = new Player();
-                        player = playerReader.playerReaderMethod();
+                        Player player = playerReader.playerReaderMethod();
 
                         playerList.add(player);
-                        writeToFile.writeDataToFile(player);
+
                         break;
                     case 2:
                         System.out.println("Jak posortowac liste:" + "\n" + "1 - rosnaco" + "\n" + "2 - mlejaco");
@@ -52,11 +49,11 @@ public class App {
                 }
 
 
-            } catch (InputMismatchException | IOException e) {
-                System.out.println("Nie wprowadzono liczby. Sprobuj jeszcze raz.");
-            }
-        } while (option != 3);
+            } while (option != 3);
+        } catch (InputMismatchException  e) {
+            System.out.println("Nie wprowadzono liczby. Sprobuj jeszcze raz.");
+        }
 
-
+        writeToFile.writeDataToFile(playerList);
     }
 }

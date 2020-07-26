@@ -178,10 +178,9 @@ public class Player implements Comparable<Player>, List<Player> {
 
     @Override
     public String toString() {
-        return "Playerinfo: " + "\n" +
-                "FirstName= " + firstName + '\n' +
-                "LastName= " + lastName + '\n' +
-                "score= " + score + "\n";
+        return  firstName + ";" +
+                lastName + ";" +
+                score + ";" + "\n";
     }
 
     @Override
