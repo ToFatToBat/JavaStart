@@ -1,13 +1,16 @@
 package JavaStart15.homework.wynikiZawodow;
 
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.*;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         int option =0;
         List<Player> playerList = new ArrayList<>();
         PlayerReader playerReader = new PlayerReader();
+        WriteToFile writeToFile = new WriteToFile();
+
 
 
 
@@ -20,7 +23,11 @@ public class App {
 
                 switch (option) {
                     case 1:
-                        playerList.add(playerReader.playerReaderMethod());
+                        Player player = new Player();
+                        player = playerReader.playerReaderMethod();
+
+                        playerList.add(player);
+                        writeToFile.writeDataToFile(player);
                         break;
                     case 2:
                         System.out.println("Jak posortowac liste:" + "\n" + "1 - rosnaco" + "\n" + "2 - mlejaco");
@@ -45,9 +52,11 @@ public class App {
                 }
 
 
-            } catch (InputMismatchException e) {
+            } catch (InputMismatchException | IOException e) {
                 System.out.println("Nie wprowadzono liczby. Sprobuj jeszcze raz.");
             }
         } while (option != 3);
+
+
     }
 }

@@ -7,12 +7,7 @@ public class Player implements Comparable<Player>, List<Player> {
     private String lastName;
     private int score;
 
-    public int getScore() {
-        return score;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
+    public Player() {
     }
 
     public Player(String firstName, String lastName, int score) {
@@ -25,6 +20,7 @@ public class Player implements Comparable<Player>, List<Player> {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
 
     public String getFirstName() {
         return firstName;
@@ -40,6 +36,14 @@ public class Player implements Comparable<Player>, List<Player> {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 
     @Override
@@ -174,7 +178,7 @@ public class Player implements Comparable<Player>, List<Player> {
 
     @Override
     public String toString() {
-        return  "Playerinfo: " + "\n" +
+        return "Playerinfo: " + "\n" +
                 "FirstName= " + firstName + '\n' +
                 "LastName= " + lastName + '\n' +
                 "score= " + score + "\n";
