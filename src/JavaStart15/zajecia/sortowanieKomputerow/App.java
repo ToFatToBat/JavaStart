@@ -6,36 +6,30 @@ public class App {
     public static void main(String[] args) {
 
 
-//        System.out.println(lista);
-//        Collections.sort(lista, Computer::compareTo);
-//        System.out.println(lista);
-//        Collections.sort(lista, Comparator.comparingInt(Computer:: getCpu));
-//        System.out.println(lista);
-//        Collections.sort(lista, Comparator.comparingInt(Computer::getMemory));
-//        System.out.println(lista);
+//        System.out.println(list);
+//        Collections.sort(list, Computer::compareTo);
+//        System.out.println(list);
+//        Collections.sort(list, Comparator.comparingInt(Computer:: getCpu));
+//        System.out.println(list);
+//        Collections.sort(list, Comparator.comparingInt(Computer::getMemory));
+//        System.out.println(list);
 
 
-        List<Computer> lista = createComputers();
-        Scanner sc = new Scanner(System.in);
-        int option;
+        List<Computer> list = createComputers();
+        int option = getSortOption();
 
-
-            System.out.println("Wpisz po jakim kryterium chcesz sortowac komputery?");
-            System.out.println("1 - name" + "\n" + "2 - cpu " + "\n" + "3 - memory" + "\n" + "4- exit");
-            option = sc.nextInt();
-
-            switch (option) {
+        switch (option) {
                 case 1:
-                    Collections.sort(lista, Computer::compareTo);
-                    printLista(lista);
+                    Collections.sort(list, Computer::compareTo);
+                    System.out.println(list);
                     break;
                 case 2:
-                    Collections.sort(lista, Comparator.comparingInt(Computer::getCpu));
-                    printLista(lista);
+                    Collections.sort(list, Comparator.comparingInt(Computer::getCpu));
+                    System.out.println(list);
                     break;
                 case 3:
-                    Collections.sort(lista, Comparator.comparingInt(Computer::getMemory));
-                    printLista(lista);
+                    Collections.sort(list, Comparator.comparingInt(Computer::getMemory));
+                    System.out.println(list);
                     break;
                 case 4:
                     System.out.println("Zakonczono prace programu.");
@@ -51,9 +45,17 @@ public class App {
 
     }
 
-    private static void printLista(List<Computer> lista) {
-        System.out.println(lista);
+    private static int getSortOption() {
+        Scanner sc = new Scanner(System.in);
+        int option;
+
+
+        System.out.println("Wpisz po jakim kryterium chcesz sortowac komputery?");
+        System.out.println("1 - name" + "\n" + "2 - cpu " + "\n" + "3 - memory" + "\n" + "4- exit");
+        option = sc.nextInt();
+        return option;
     }
+
 
     private static List<Computer> createComputers() {
         Computer computer1 = new Computer("A", 200, 300);
