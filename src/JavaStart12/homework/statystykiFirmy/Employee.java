@@ -3,14 +3,14 @@ package JavaStart12.homework.statystykiFirmy;
 public class Employee {
     private String name;
     private String lastName;
-    private int pesel;
+    private String pesel;
     private Section section;
     private int salary;
 
     public Employee() {
     }
 
-    public Employee(String name, String lastName, int pesel, Section section, int salary) {
+    public Employee(String name, String lastName, String pesel, Section section, int salary) {
         this.name = name;
         this.lastName = lastName;
         this.pesel = pesel;
@@ -34,11 +34,11 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public int getPesel() {
+    public String getPesel() {
         return pesel;
     }
 
-    public void setPesel(int pesel) {
+    public void setPesel(String pesel) {
         this.pesel = pesel;
     }
 

@@ -30,7 +30,7 @@ public enum Option {
     public static Option createFromValue(int value) throws NoSuchOptionException {
         try {
             for (Option e : Option.values()) {
-                 if (e.value.equals(value)) {
+                 if (e.equals(value)) {
                     return e;
                 }
             }
