@@ -24,7 +24,7 @@ public class App {
                 employees[lines] = new Employee();
                 employees[lines].setName(oneLineData[0]);
                 employees[lines].setLastName(oneLineData[1]);
-                employees[lines].setPesel(Integer.parseInt(oneLineData[2], 10));
+                employees[lines].setPesel(String.valueOf(oneLineData[2]));
                 employees[lines].setSection(Section.valueOf(oneLineData[3].toUpperCase()));
                 employees[lines].setSalary(Integer.parseInt(oneLineData[4], 10));
                 lines++;
@@ -32,6 +32,8 @@ public class App {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();
         }
 
